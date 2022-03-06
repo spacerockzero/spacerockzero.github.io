@@ -1,0 +1,346 @@
+
+  
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://jakobanderson.com/">
+    <meta name="author" content="Jakob Anderson">
+    <meta name="description" content="Fighting for Performance and Craft at the Front-lines">
+    <meta name="keywords" content="">
+    <meta name="generator" content="Hugo 0.93.2" />
+    <title>
+        
+           
+               When to Use Cookies and LocalStorage &vert; Jakob Anderson
+           
+        
+    </title>
+    <meta name="description" content="When to Use Cookies and LocalStorage - Fighting for Performance and Craft at the Front-lines">
+    <meta itemprop="name" content="When to Use Cookies and LocalStorage">
+    <meta itemprop="description" content="When to Use Cookies and LocalStorage - Fighting for Performance and Craft at the Front-lines">
+    <meta property="og:title" content="When to Use Cookies and LocalStorage">
+    <meta property="og:description" content="When to Use Cookies and LocalStorage - Fighting for Performance and Craft at the Front-lines">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/">
+    <meta property="og:site_name" content="Jakob Anderson">
+    <meta property="og:type" content="article">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#2d89ef">
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/posts/2016-03-01-when-to-user-cookies-and-localstorage/" rel="alternate" type="application/rss+xml" title="Jakob Anderson" />
+    <link href="/posts/2016-03-01-when-to-user-cookies-and-localstorage/" rel="feed" type="application/rss+xml" title="Jakob Anderson" />
+    <link href="/posts/2016-03-01-when-to-user-cookies-and-localstorage/index.xml" rel="feed" type="application/rss+xml" title="Jakob Anderson" />
+    
+
+    
+    <link rel="canonical" href="https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/">
+    
+
+    <link rel="stylesheet" href="https://jakobanderson.com/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+                
+                    <li><a href="https://jakobanderson.com/page/about/">About Me</a></li>
+                
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    <img src="/jakob-anderson-sq-opto.jpg" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    Jakob Anderson
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Fighting for Performance and Craft at the Front-lines</span>
+            
+        </div>
+
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/">
+            When to Use Cookies and LocalStorage
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2016-03-01</span>
+            
+        
+
+        
+            
+                <span class="readingTime">3 min read</span>
+            
+        
+
+        
+
+        
+    </div>
+
+    
+        
+
+        <p>Problem: I need to persist data.</p>
+<h2 id="when-to-use-localstorage">When to use localstorage:</h2>
+<ul>
+<li>I need to persist data for just my client-side code. This will always be stored at domain-global scope.</li>
+</ul>
+<h2 id="when-to-use-cookies">When to use cookies:</h2>
+<ul>
+<li>I need to persist &amp; share data with my server-side code. This can be from client to server or server to server. This can be page, app, or global-mounted scopes.</li>
+</ul>
+<h2 id="local-storage-best-practices">Local-storage Best Practices:</h2>
+<ul>
+<li>A global domain (<a href="https://mysite.com">https://mysite.com</a>) has to share <a href="http://www.html5rocks.com/en/tutorials/offline/quota-research/">less than 5MB of localStorage on the devices with the lowest quotas</a>. Be a good neighbor.</li>
+<li>LocalStorage doesn&rsquo;t have its&rsquo; own expire system, so embed storage/expire timestamps in the objects your store and set up a mechanism for garbage-collecting it when it is old.</li>
+<li>Use the API correctly. To store things, store objects or strings with <code>window.localstorage.setItem('myKey','myValue')</code> or <code>window.localstorage.setItem('myKey',myObject)</code></li>
+</ul>
+<h2 id="cookies-best-practices">Cookies best-practices:</h2>
+<ul>
+<li>Browser limits on cookies per domain are as low as 4KB. It&rsquo;s easier than you think to hit this limit when using global cookies for lots of things.</li>
+<li>We need to use these bytes more wisely, especially because they are transmitted as headers on every request per domain.</li>
+<li>Always use the existing cookie methods to get, set, and unset cookies, to avoid obliterating any other mission-critical cookies or writing excess code to solve the same problem</li>
+</ul>
+<h2 id="mount-on-tightest-scope-you-can">Mount on tightest scope you can.</h2>
+<ul>
+<li>Cookies are transmitted on every request that shares its&rsquo; domain. If all the cookies are set on the &ldquo;/&rdquo; domain, they will be transmitted with EVERY request that browser makes to every app and endpoint also mounted on that same domain.</li>
+<li>If you only need to persist the data on a page, mount the cookie to the page&rsquo;s scope (&quot;/photos/people&quot;). If you need to persist the data across multiple pages of your app, mount it to your app&rsquo;s scope (&quot;/photos/&quot;). If you need to persist the data across multiple apps/routes, you can mount the cookie at the domain root &ldquo;/&rdquo;</li>
+</ul>
+<h3 id="shortest-expires">Shortest Expires.</h3>
+<p>Set expires for as short a time as possible. If possible, use session cookies (expire after tab close or navigation off). This will help the cookie disappear once it is not being used anymore, taking it&rsquo;s performance cost along with it.</p>
+<h3 id="store-only-when-you-really-need-it">Store only when you really need it.</h3>
+<p>Default states and most common settings should not set cookies, we should only store the exceptions. If 99% of users have <code>frog=true</code>, you should only set and check for a cookie when <code>frog=false</code>, so that only 1% of users incur the performance penalty while the cookie is being used.</p>
+<h3 id="store-as-few-bytes-as-possible">Store as few bytes as possible.</h3>
+<ul>
+<li>Your cookie names and keys should be short and unique. Save space on character length, but when mounting in the global domain, be sure your cookie name won&rsquo;t collide with someone else&rsquo;s.</li>
+<li>You should use a library to condense and unpack the cookies if you have any complex data, so you&rsquo;re transmitting as few bytes as possible, while not manually handling the formatting each time.</li>
+<li>Do not use json, use form-encoding (a=1;b=0) or querystring (a=1&amp;b=0) format. JSON is extremely wasteful on character length once you have encoded it properly. The other formats use far fewer characters, and are easy to encode/decode and read without the size ballooning.</li>
+<li>When storing true/false values, use 1/0, to save bytes.</li>
+<li>Combine multiple similar settings into one cookie, rather than having a cookie for each key/value pair. This also helps with organization and DRY code. For example: exp: a=0;b=1;</li>
+</ul>
+
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="comments-container">
+            
+            
+
+            
+
+            
+
+        </div>
+    
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2017-01-12-notes-on-bill-scott-bringing-change-to-life/">&#39;Bill Scott: Bringing Change to Life&#39;</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-04-22-virtual-standup-meetings/">Virtual Stand-up Meetings</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/">When to Use Cookies and LocalStorage</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/">Run Baseline Performance Tests</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/">Install Free Ghost Blog on Heroku</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/">Speed, Performance, and Human Perception</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2015-12-12-web-performance-culture/">Web Performance Culture</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>Social media</strong>
+
+                
+                <a href="https://twitter.com/jakob_anderson" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://twitter.com/eclecticbeams" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://github.com/spacerockzero" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a href="https://jakobanderson.com/index.xml" target="_blank"><i class="fab fa fa-rss"></i></a>
+                
+                <a href="https://jakobanderson.com/index.json" target="_blank"><i class="fab fa fa-brackets"></i></a>
+                
+            </div>
+            
+
+            
+
+            
+            <div class="archive">
+                <a href="/archive/"><strong>Archive</strong></a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://jakobanderson.com" target="_blank">
+                &copy;
+                
+                2022
+                
+                by Jakob Anderson
+            </a>
+            
+        </div>
+        <div class="author">
+            <a href="https://jakobanderson.com"
+                target="_blank">JakobAnderson.com</a>
+        </div>
+    </div>
+</div>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-11240242-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+
+    <script type="text/javascript" src="https://jakobanderson.com/theme.js"></script>
+
+    
+    
+    
+
+    
+</body>
+
+</html>

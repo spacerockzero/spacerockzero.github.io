@@ -1,0 +1,393 @@
+
+  
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://jakobanderson.com/">
+    <meta name="author" content="Jakob Anderson">
+    <meta name="description" content="Fighting for Performance and Craft at the Front-lines">
+    <meta name="keywords" content="">
+    <meta name="generator" content="Hugo 0.93.2" />
+    <title>
+        
+           
+               Speed, Performance, and Human Perception &vert; Jakob Anderson
+           
+        
+    </title>
+    <meta name="description" content="Speed, Performance, and Human Perception - Fighting for Performance and Craft at the Front-lines">
+    <meta itemprop="name" content="Speed, Performance, and Human Perception">
+    <meta itemprop="description" content="Speed, Performance, and Human Perception - Fighting for Performance and Craft at the Front-lines">
+    <meta property="og:title" content="Speed, Performance, and Human Perception">
+    <meta property="og:description" content="Speed, Performance, and Human Perception - Fighting for Performance and Craft at the Front-lines">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/">
+    <meta property="og:site_name" content="Jakob Anderson">
+    <meta property="og:type" content="article">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#2d89ef">
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/posts/2015-12-19-speed-performance-and-human-perception/" rel="alternate" type="application/rss+xml" title="Jakob Anderson" />
+    <link href="/posts/2015-12-19-speed-performance-and-human-perception/" rel="feed" type="application/rss+xml" title="Jakob Anderson" />
+    <link href="/posts/2015-12-19-speed-performance-and-human-perception/index.xml" rel="feed" type="application/rss+xml" title="Jakob Anderson" />
+    
+
+    
+    <link rel="canonical" href="https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/">
+    
+
+    <link rel="stylesheet" href="https://jakobanderson.com/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+                
+                    <li><a href="https://jakobanderson.com/page/about/">About Me</a></li>
+                
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    <img src="/jakob-anderson-sq-opto.jpg" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    Jakob Anderson
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Fighting for Performance and Craft at the Front-lines</span>
+            
+        </div>
+
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/">
+            Speed, Performance, and Human Perception
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2015-12-19</span>
+            
+        
+
+        
+            
+                <span class="readingTime">3 min read</span>
+            
+        
+
+        
+
+        
+    </div>
+
+    
+        
+
+        <p><em>Notes from Ilya Grigorik&rsquo;s talk at O&rsquo;Reilly Fluent conference 2014</em></p>
+<p>My notes on Ilya Grigorik’s talk (@igrigorik)
+Video: <a href="http://www.youtube.com/watch?v=7ubJzEi3HuA">http://www.youtube.com/watch?v=7ubJzEi3HuA</a></p>
+<div class="flex-video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7ubJzEi3HuA" frameborder="0" allowfullscreen></iframe>
+</div>
+<p>What follows are my notes from watching Ilya’s presentation:</p>
+<p>“Performance” means many different things to different people full-stack perf is complicated is there such a thing as “fast enough”? context matters: — 10fps matters in games, 10fps matters much less in e-commerce Devs often forget about the wetware running their ui’s (human brain) Joked about it using some sort of IE6</p>
+<h2 id="task-oriented-reaction-times">Task Oriented Reaction Times:</h2>
+<blockquote>
+<p>Intent &gt; Action &gt; Response</p>
+</blockquote>
+<h2 id="delay--user-reaction">Delay &gt; User Reaction</h2>
+<table>
+  <tr><td> 1-100ms </td><td> Instant </td></tr>
+  <tr><td> 100-300ms </td><td> slight perceptible delay </td></tr>
+  <tr><td> 300-1000ms </td><td> Task focus, perceptible delay 1s+ mental context switch </td></tr>
+  <tr><td> 10s+ </td><td> I’ll come back later… </td></tr>
+</table>
+<h2 id="visual-and-audio-processing-have-different-perceptive-resolutions">Visual and audio processing have different perceptive resolutions:</h2>
+<h3 id="visual">Visual</h3>
+<ul>
+<li><strong>24fps (~40ms)</strong> — minimum stutter-free FPS</li>
+<li><strong>60fps (~16ms)</strong> — silky smooth experience</li>
+</ul>
+<h3 id="auditory">Auditory</h3>
+<ul>
+<li><strong>1ms+ jitter</strong> — Audible sound discontinuity</li>
+</ul>
+<h2 id="perceived-perf-equation">Perceived perf equation:</h2>
+<blockquote>
+<p><strong>Perceived performance</strong> = <code>f(Expected Performance, UX, Actual Performance) </code></p>
+</blockquote>
+<p><strong>The UX is the glue between expectations and silicon</strong></p>
+<blockquote>
+<p>Performance is not just milliseconds, frames, and megabytes. It’s also how these milliseconds, frames, and megabytes translate to HOW THE USER PERCEIVES THE APPLICATION.</p>
+</blockquote>
+<h2 id="whos-responsible-for-perf-of-ux-layer-everyone">Who’s responsible for perf of UX layer? Everyone.</h2>
+<h3 id="hacker-news-case-study">Hacker news case study:</h3>
+<ul>
+<li>Hacker news is fast due to its simplicity, renders reliably in under 500ms.</li>
+<li>Experience actually sucks on mobile. Takes a few seconds to realize the page is loaded and text is too small, then zoom in, then swiper to read the headlines.</li>
+<li>Actual time to complete task is around 5-10s, and I hate it.</li>
+<li>Fulfills technical aspects, but fails on completing task in a performant manner.</li>
+</ul>
+<h3 id="finally-as-a-community-we-have-moved-past-the-onload-time">Finally, as a community, we have moved past the onload time.</h3>
+<ul>
+<li>What are the primary use tasks for your application?</li>
+<li>What is the time to task completion? What is the expected time to task completion?</li>
+<li><em><strong>Determine primary core tasks you want user to achieve. Measure the time it takes for them to be available, and how long it takes to complete them.</strong></em></li>
+</ul>
+<h2 id="blogger-case-study">Blogger case study:</h2>
+<p><em>There is a &ldquo;too fast&rdquo;</em></p>
+<ul>
+<li>Creating a new blog was almost instant, it returned almost immediately.</li>
+<li>Users expected important things to take a little bit of time. task was a big commitment.</li>
+<li>Users thought experience was broken because it returned too fast. had low user satisfaction.</li>
+<li>Simple fix: add a spinner on a page that does absolutely nothing, and user satisfaction went up.</li>
+<li>The user/wetware expectation was different from the ui result, so satisfaction is low.</li>
+</ul>
+<h2 id="phpmyadmin-case-study">phpMyAdmin case study:</h2>
+<ul>
+<li>Because the db queries take different, inconsistent amounts of time, the feedback was inconsistent.</li>
+<li><strong><em>You must give users feedback, and also feedback to inform their expectations.</em></strong></li>
+<li>If something will take a long time, let them know.</li>
+<li>Give feedback in metrics, units that are very clear to intended users, IE: seconds, minutes instead of gigabytes for consumers.</li>
+</ul>
+<h2 id="experience-formula">Experience Formula:</h2>
+<blockquote>
+<p><strong>Perceived Performance</strong> = <code>f(Expected Performance, UX, Actual Performance) </code></p>
+</blockquote>
+<blockquote>
+<p><strong>Experience</strong> = <code>f(Perceived Performance, Task Completion)</code></p>
+</blockquote>
+<ul>
+<li>What is the task the user is trying to achieve?</li>
+<li>What does the wetwear between our ears expect?</li>
+<li>What is the technical performance of the components required to fulfill the task? Megabytes, milliseconds, frames?</li>
+<li>How can we design the app to best connect perceived and actual performance? Did it succeed in helping me complete the task?</li>
+</ul>
+<h2 id="main-takeaways">Main Takeaways:</h2>
+<ul>
+<li><strong>Developers:</strong> learn about the wetwear (user brain). Think about the user tasks. Performance is when these two meet in the middle.</li>
+<li><strong>Designers:</strong> learn about the technical and wetwear (user brain) constraints, design for task completion.</li>
+</ul>
+
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="comments-container">
+            
+            
+
+            
+
+            
+
+        </div>
+    
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2017-01-12-notes-on-bill-scott-bringing-change-to-life/">&#39;Bill Scott: Bringing Change to Life&#39;</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-04-22-virtual-standup-meetings/">Virtual Stand-up Meetings</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/">When to Use Cookies and LocalStorage</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/">Run Baseline Performance Tests</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/">Install Free Ghost Blog on Heroku</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/">Speed, Performance, and Human Perception</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2015-12-12-web-performance-culture/">Web Performance Culture</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>Social media</strong>
+
+                
+                <a href="https://twitter.com/jakob_anderson" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://twitter.com/eclecticbeams" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://github.com/spacerockzero" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a href="https://jakobanderson.com/index.xml" target="_blank"><i class="fab fa fa-rss"></i></a>
+                
+                <a href="https://jakobanderson.com/index.json" target="_blank"><i class="fab fa fa-brackets"></i></a>
+                
+            </div>
+            
+
+            
+
+            
+            <div class="archive">
+                <a href="/archive/"><strong>Archive</strong></a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://jakobanderson.com" target="_blank">
+                &copy;
+                
+                2022
+                
+                by Jakob Anderson
+            </a>
+            
+        </div>
+        <div class="author">
+            <a href="https://jakobanderson.com"
+                target="_blank">JakobAnderson.com</a>
+        </div>
+    </div>
+</div>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-11240242-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+
+    <script type="text/javascript" src="https://jakobanderson.com/theme.js"></script>
+
+    
+    
+    
+
+    
+</body>
+
+</html>

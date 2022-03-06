@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Jakob Anderson</title>
+    <link>https://jakobanderson.com/posts/</link>
+    <description>Recent content in Posts on Jakob Anderson</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 12 Jan 2017 00:00:00 +0000</lastBuildDate><atom:link href="https://jakobanderson.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#39;Bill Scott: Bringing Change to Life&#39;</title>
+      <link>https://jakobanderson.com/posts/2017-01-12-notes-on-bill-scott-bringing-change-to-life/</link>
+      <pubDate>Thu, 12 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jakobanderson.com/posts/2017-01-12-notes-on-bill-scott-bringing-change-to-life/</guid>
+      <description>Software is easy, people are hard.
+ Bill Scott gets that in a big way, and teaches a master class on getting stubborn, backwards-cultured companies to adopt faster, more iterative ways to learn and deliver the right value to their users, both at Netflix and at PayPal.
+Here are some notes I took on Bill Scott&amp;rsquo;s presentation video: &amp;ldquo;Bringing Change to Life&amp;rdquo;.
+Bill Scott - Bringing Change to Life  MX 2014 | Bill Scott | Bringing Change to Life from Adaptive Path on Vimeo.</description>
+    </item>
+    
+    <item>
+      <title>Virtual Stand-up Meetings</title>
+      <link>https://jakobanderson.com/posts/2016-04-22-virtual-standup-meetings/</link>
+      <pubDate>Fri, 22 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jakobanderson.com/posts/2016-04-22-virtual-standup-meetings/</guid>
+      <description>There should be as little process as is helpful in your work life. We already don&amp;rsquo;t feel we have enough time to get projects done on time, and never enough to work on improving our technical skills.
+There is simply not enough time.
+Then, in comes a daily marathon-long standup meeting. These break Agile specs, which say stand-ups should be &amp;ldquo;[&amp;hellip;] timeboxed to between 5 and 15 minutes, and take place with participants standing up to remind people to keep the meeting short and to-the-point.</description>
+    </item>
+    
+    <item>
+      <title>When to Use Cookies and LocalStorage</title>
+      <link>https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/</link>
+      <pubDate>Tue, 01 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/</guid>
+      <description>Problem: I need to persist data.
+When to use localstorage:  I need to persist data for just my client-side code. This will always be stored at domain-global scope.  When to use cookies:  I need to persist &amp;amp; share data with my server-side code. This can be from client to server or server to server. This can be page, app, or global-mounted scopes.  Local-storage Best Practices:  A global domain (https://mysite.</description>
+    </item>
+    
+    <item>
+      <title>Run Baseline Performance Tests</title>
+      <link>https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/</link>
+      <pubDate>Tue, 19 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/</guid>
+      <description>Blog Performance Series, part 2
+  Welcome to part 2 of my blog performance series. I&amp;rsquo;m Jakob Anderson, and I&amp;rsquo;m going to show you how to run some baseline performance tests on your blog. This is where we find out how your initial performance is, so we can tell where you currently stand, and whether performance has improved after we&amp;rsquo;ve changed things.
+Which metrics? Well, the first thing we need to know is:</description>
+    </item>
+    
+    <item>
+      <title>Install Free Ghost Blog on Heroku</title>
+      <link>https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/</link>
+      <pubDate>Mon, 18 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/</guid>
+      <description>Blog Performance Series, Part 1
+Hi! I&amp;rsquo;m Jakob Anderson, and I&amp;rsquo;m going to show you how to install a Ghost Blog on Heroku, for free.
+  What&amp;rsquo;s a Ghost Blog? Ghost is a blog engine built on NodeJS, that is super simple, fast, and reliable. If you want a blog built with performance on the mind that is super-easy to set up and fairly optimized out of the box, Ghost is a pretty good option right now.</description>
+    </item>
+    
+    <item>
+      <title>Speed, Performance, and Human Perception</title>
+      <link>https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/</link>
+      <pubDate>Sat, 19 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/</guid>
+      <description>Notes from Ilya Grigorik&amp;rsquo;s talk at O&amp;rsquo;Reilly Fluent conference 2014
+My notes on Ilya Grigorik’s talk (@igrigorik) Video: http://www.youtube.com/watch?v=7ubJzEi3HuA
+  What follows are my notes from watching Ilya’s presentation:
+“Performance” means many different things to different people full-stack perf is complicated is there such a thing as “fast enough”? context matters: — 10fps matters in games, 10fps matters much less in e-commerce Devs often forget about the wetware running their ui’s (human brain) Joked about it using some sort of IE6</description>
+    </item>
+    
+    <item>
+      <title>Web Performance Culture</title>
+      <link>https://jakobanderson.com/posts/2015-12-12-web-performance-culture/</link>
+      <pubDate>Sat, 12 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jakobanderson.com/posts/2015-12-12-web-performance-culture/</guid>
+      <description>If you want to improve web performance at your company, creating a Performance Culture is the best way to maintain it. This video explains how to do this in the best way I&amp;rsquo;ve seen yet. Check it out! (My Summary notes below)
+Video: https://www.youtube.com/watch?v=0bRLtJHo0pI
+Presenters:  Paul Lewis (Google dev advocate) Lara Swanson (Etsy perf)     Notes: SUMMARY  Gather Data Get VIP Buy-In Educate your team Surface the data daily Celebrate your victories  Some stats  Percentage of total global internet traffic on mobile: ~40% in 2014 % in US: ~30% in 2013 mobile networks add ~600ms of extra connection latency people leave when your site is slow 40% abandon site when it takes more than 3s to load (find our bounce-rate stats on this)  Options:  Ignore it Assign performance cops (burnout, not sustainable) Build a performance culture  Culture:  A way of identifying yourself and others.</description>
+    </item>
+    
+    <item>
+      <title>Why Should We Work on Web Performance?</title>
+      <link>https://jakobanderson.com/posts/2015-11-29-why-should-we-work-on-web-performance/</link>
+      <pubDate>Sun, 29 Nov 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jakobanderson.com/posts/2015-11-29-why-should-we-work-on-web-performance/</guid>
+      <description>tldr; It affects conversions. It makes it possible to get your product into low-bandwidth and mobile-only areas. Users get more work done before running out of patience or time. There&amp;rsquo;s lots of evidence and studies for all of this.
+It affects conversions  23 Stats on Mobile Web Performance - Soasta Web Page Speed Affects Conversions (Infographic) - Web Performance Today How Page Speed Correlates to Business Metrics - Web Performance Today  Makes it possible to get into low-bandwidth and mobile-only areas  (Pacific Islands, Africa, South Asia, South America) 23 Stats on Mobile Web Performance - Soasta  Users get more work done before running of patience or time  Nobody likes waiting, and patience and willpower are finite.</description>
+    </item>
+    
+  </channel>
+</rss>

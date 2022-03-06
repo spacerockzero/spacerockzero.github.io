@@ -1,0 +1,403 @@
+
+  
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://jakobanderson.com/">
+    <meta name="author" content="Jakob Anderson">
+    <meta name="description" content="Fighting for Performance and Craft at the Front-lines">
+    <meta name="keywords" content="">
+    <meta name="generator" content="Hugo 0.93.2" />
+    <title>
+        
+           
+               Install Free Ghost Blog on Heroku &vert; Jakob Anderson
+           
+        
+    </title>
+    <meta name="description" content="Install Free Ghost Blog on Heroku - Fighting for Performance and Craft at the Front-lines">
+    <meta itemprop="name" content="Install Free Ghost Blog on Heroku">
+    <meta itemprop="description" content="Install Free Ghost Blog on Heroku - Fighting for Performance and Craft at the Front-lines">
+    <meta property="og:title" content="Install Free Ghost Blog on Heroku">
+    <meta property="og:description" content="Install Free Ghost Blog on Heroku - Fighting for Performance and Craft at the Front-lines">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/">
+    <meta property="og:site_name" content="Jakob Anderson">
+    <meta property="og:type" content="article">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#2d89ef">
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/posts/2016-01-18-install-free-ghost-blog-on-heroku/" rel="alternate" type="application/rss+xml" title="Jakob Anderson" />
+    <link href="/posts/2016-01-18-install-free-ghost-blog-on-heroku/" rel="feed" type="application/rss+xml" title="Jakob Anderson" />
+    <link href="/posts/2016-01-18-install-free-ghost-blog-on-heroku/index.xml" rel="feed" type="application/rss+xml" title="Jakob Anderson" />
+    
+
+    
+    <link rel="canonical" href="https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/">
+    
+
+    <link rel="stylesheet" href="https://jakobanderson.com/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+                
+                    <li><a href="https://jakobanderson.com/page/about/">About Me</a></li>
+                
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    <img src="/jakob-anderson-sq-opto.jpg" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    Jakob Anderson
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Fighting for Performance and Craft at the Front-lines</span>
+            
+        </div>
+
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/">
+            Install Free Ghost Blog on Heroku
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2016-01-18</span>
+            
+        
+
+        
+            
+                <span class="readingTime">4 min read</span>
+            
+        
+
+        
+
+        
+    </div>
+
+    
+        
+
+        <p><strong>Blog Performance Series, Part 1</strong></p>
+<p>Hi! I&rsquo;m Jakob Anderson, and I&rsquo;m going to show you how to install a Ghost Blog on Heroku, for free.</p>
+<div class="flex-video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P13AUfKqcsQ?list=PLWYz5kbNpmYUPTzgw8rhdAk64r4tH1Ynq" frameborder="0" allowfullscreen></iframe>
+</div>
+<h4 id="whats-a-ghost-blog">What&rsquo;s a Ghost Blog?</h4>
+<p>Ghost is a blog engine built on NodeJS, that is super simple, fast, and reliable. If you want a blog built with performance on the mind that is super-easy to set up and fairly optimized out of the box, Ghost is a pretty good option right now. You can also host your own deploy for free on Heroku&rsquo;s free platform using a pushbutton deploy like what I&rsquo;m about to show you.</p>
+<h4 id="requirements">Requirements:</h4>
+<ul>
+<li>Heroku account (will need to connect card to verify account, but free tier dynos won&rsquo;t cost money to use)</li>
+<li>[optional] Github Account (or other cloud-based git service)</li>
+<li>[optional] Amazon S3 bucket with API user keys (for hosting blog post images)</li>
+</ul>
+<h4 id="install-steps">Install steps</h4>
+<ul>
+<li>
+<p>Go to <a href="http://cobyism.com/ghost-on-heroku/">http://cobyism.com/ghost-on-heroku/</a></p>
+</li>
+<li>
+<p>Click &ldquo;Deploy Ghost to Heroku&rdquo; Button</p>
+</li>
+<li>
+<p>Login to Heroku</p>
+</li>
+<li>
+<p>Select org, type appname, region, and input config vars below</p>
+<ul>
+<li>Only <code>HEROKU_URL</code> is required. If you&rsquo;re putting a custom domain name in front of your Heroku app, you&rsquo;ll change the HEROKU_URL to match the new domain.</li>
+<li>If using AWS S3 to store uploaded images, you need to fill out the S3 fields. <code>S3_ASSET_HOST_URL</code> is optional.</li>
+</ul>
+</li>
+<li>
+<p>Hit &ldquo;Deploy for Free&rdquo; button at bottom</p>
+</li>
+<li>
+<p>&ldquo;Manage App&rdquo; or &ldquo;View&rdquo;</p>
+</li>
+<li>
+<p>&ldquo;Manage App&rdquo; takes you to the app&rsquo;s Heroku dash page</p>
+</li>
+<li>
+<p>&ldquo;View&rdquo; takes you to the app&rsquo;s hosted web url, and forwards you to the admin setup page</p>
+</li>
+</ul>
+<h4 id="setup-blog-admin">Setup blog admin</h4>
+<ul>
+<li>Clicking &ldquo;View&rdquo; will take you to something like: <code>{YOUR-HEROKU-URL}/ghost/setup/one/</code></li>
+<li>Your blog&rsquo;s URL will be something like: <code>https://{BLOG-NAME}.herokuapp.com</code></li>
+<li>Select &ldquo;Create Your Account&rdquo;</li>
+<li>Fill out info for admin account and blog title</li>
+<li>Click &ldquo;Invite team to blog&rdquo; (is optional, can pass through)</li>
+<li>Click &ldquo;I&rsquo;ll do this later, take me to my blog!&rdquo; at bottom</li>
+</ul>
+<h4 id="create-some-content">Create some content</h4>
+<p>Ghost made a sample blog post for you. Posts are authored in &ldquo;Markdown&rdquo; format, so they never need any buttons or UI to make things like headings, bold, italics, links, images, etc. This puts authoring content in center focus, with no distractions.</p>
+<ul>
+<li>You can click &ldquo;edit&rdquo; on the sample article to see how writing in Markdown works</li>
+<li>You can click &ldquo;New Post&rdquo; on the menu at left to make a new article</li>
+<li>Fill it out to your desire
+<ul>
+<li>Title</li>
+<li>Content</li>
+<li>Headings</li>
+<li>Image</li>
+<li>Links</li>
+</ul>
+</li>
+<li>You can save your changes regularly by hitting ctrl-s on windows, or cmd-s on a mac, or by hitting that &ldquo;Save Draft&rdquo; button up in the top right</li>
+<li>Mess with important post meta by hitting that gear up in the top right as well</li>
+<li>Set a post image, change the post url, add tags, change author, edit and preview meta data for organic search results, and a couple other things</li>
+<li>To publish your post, click that button in the top right, and hit &ldquo;Publish Now&rdquo;, then hit &ldquo;Publish&rdquo;. Now it should say &ldquo;Update Post&rdquo; to update post with any new changes. You can also drop-down and &ldquo;Unpublish&rdquo; if you&rsquo;ve made a horrible mistake.</li>
+</ul>
+<h4 id="make-some-navigation-items">Make some navigation items</h4>
+<ul>
+<li>Hit &ldquo;Navigation&rdquo; on left side nav</li>
+<li>You already have a &ldquo;Home&rdquo; link. Follow that pattern to make another nav link to an existing public page on your blog, like the page we just made. If you need to know the urls of your current pages, it&rsquo;ll say under the gear menu of each blog while you&rsquo;re editing them.</li>
+<li>Go check out your blog with some content!
+<a href="https://jakob-ghost-test.herokuapp.com/">https://jakob-ghost-test.herokuapp.com/</a></li>
+<li>If you are viewing your content page and you need to edit something, jump into edit by adding <code>/edit</code> to the page&rsquo;s url</li>
+</ul>
+<h4 id="caveats">Caveats</h4>
+<ul>
+<li>On Heroku, the free tier has some limitations.
+<ul>
+<li>Your app will go to sleep when its&rsquo; been idle for a bit.</li>
+<li>For it to stay on the free tier, it MUST sleep at least 6 hours a day.</li>
+<li>If the app is idle, it can take up to 20 seconds to wake it up.</li>
+<li>It can only have one Dyno to scale. A Dyno is Heroku&rsquo;s name for a small micro-instance on a shared VM.</li>
+</ul>
+</li>
+<li>Once your blog is pretty serious, you can upgrade to the &ldquo;Hobby Tier&rdquo;</li>
+<li>You can even attach your domain name to this Heroku app, and it works great!</li>
+</ul>
+<h4 id="thank-you">Thank you</h4>
+<p>I hope you enjoyed this post and video, and got a pretty cool, free Ghost blog up and running. Feel free to <a href="/feed.xml">subscribe to this blog</a> or to <a href="https://www.youtube.com/channel/UCMYju7_hZFd0qCN0RljjNYQ">my youtube channel and check out my other videos!</a></p>
+
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="comments-container">
+            
+            
+
+            
+
+            
+
+        </div>
+    
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2017-01-12-notes-on-bill-scott-bringing-change-to-life/">&#39;Bill Scott: Bringing Change to Life&#39;</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-04-22-virtual-standup-meetings/">Virtual Stand-up Meetings</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/">When to Use Cookies and LocalStorage</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/">Run Baseline Performance Tests</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/">Install Free Ghost Blog on Heroku</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/">Speed, Performance, and Human Perception</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2015-12-12-web-performance-culture/">Web Performance Culture</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>Social media</strong>
+
+                
+                <a href="https://twitter.com/jakob_anderson" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://twitter.com/eclecticbeams" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://github.com/spacerockzero" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a href="https://jakobanderson.com/index.xml" target="_blank"><i class="fab fa fa-rss"></i></a>
+                
+                <a href="https://jakobanderson.com/index.json" target="_blank"><i class="fab fa fa-brackets"></i></a>
+                
+            </div>
+            
+
+            
+
+            
+            <div class="archive">
+                <a href="/archive/"><strong>Archive</strong></a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://jakobanderson.com" target="_blank">
+                &copy;
+                
+                2022
+                
+                by Jakob Anderson
+            </a>
+            
+        </div>
+        <div class="author">
+            <a href="https://jakobanderson.com"
+                target="_blank">JakobAnderson.com</a>
+        </div>
+    </div>
+</div>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-11240242-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+
+    <script type="text/javascript" src="https://jakobanderson.com/theme.js"></script>
+
+    
+    
+    
+
+    
+</body>
+
+</html>

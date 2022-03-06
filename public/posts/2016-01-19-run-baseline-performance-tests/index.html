@@ -1,0 +1,441 @@
+
+  
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="siteBaseUrl" content="https://jakobanderson.com/">
+    <meta name="author" content="Jakob Anderson">
+    <meta name="description" content="Fighting for Performance and Craft at the Front-lines">
+    <meta name="keywords" content="">
+    <meta name="generator" content="Hugo 0.93.2" />
+    <title>
+        
+           
+               Run Baseline Performance Tests &vert; Jakob Anderson
+           
+        
+    </title>
+    <meta name="description" content="Run Baseline Performance Tests - Fighting for Performance and Craft at the Front-lines">
+    <meta itemprop="name" content="Run Baseline Performance Tests">
+    <meta itemprop="description" content="Run Baseline Performance Tests - Fighting for Performance and Craft at the Front-lines">
+    <meta property="og:title" content="Run Baseline Performance Tests">
+    <meta property="og:description" content="Run Baseline Performance Tests - Fighting for Performance and Craft at the Front-lines">
+    <meta property="og:image" content="https://www.gravatar.com/avatar/d41d8cd98f00b204e9800998ecf8427e?size=200">
+    <meta property="og:url" content="https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/">
+    <meta property="og:site_name" content="Jakob Anderson">
+    <meta property="og:type" content="article">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2d89ef">
+<meta name="theme-color" content="#2d89ef">
+
+
+    <script src="/modernizr-simple.js"></script>
+
+    
+    <link href="/posts/2016-01-19-run-baseline-performance-tests/" rel="alternate" type="application/rss+xml" title="Jakob Anderson" />
+    <link href="/posts/2016-01-19-run-baseline-performance-tests/" rel="feed" type="application/rss+xml" title="Jakob Anderson" />
+    <link href="/posts/2016-01-19-run-baseline-performance-tests/index.xml" rel="feed" type="application/rss+xml" title="Jakob Anderson" />
+    
+
+    
+    <link rel="canonical" href="https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/">
+    
+
+    <link rel="stylesheet" href="https://jakobanderson.com/theme.css">
+
+    
+
+    
+        
+    
+</head>
+
+<body class="bilberry-hugo-theme">
+
+    
+    <nav>
+
+    <div class="container">
+        <ul class="topnav">
+            
+                
+                    <li><a href="https://jakobanderson.com/page/about/">About Me</a></li>
+                
+            
+        </ul>
+
+        
+    </div>
+</nav>
+
+
+    
+    <header>
+
+    <div class="container">
+        <div class="logo">
+            <a href="/" class="logo">
+                
+                    <img src="/jakob-anderson-sq-opto.jpg" alt="">
+                
+
+                <span class="overlay"><i class="fa fa-home"></i></span>
+            </a>
+        </div>
+        <div class="titles">
+            <h3 class="title">
+                <a href="/">
+                    Jakob Anderson
+                </a>
+            </h3>
+
+            
+                <span class="subtitle">Fighting for Performance and Craft at the Front-lines</span>
+            
+        </div>
+
+        
+
+        
+            <div class="toggler">
+        
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+    <div class="main container">
+        
+    <div class="article-wrapper u-cf single">
+        
+            <a class="bubble" href="https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+
+<article class="default article">
+    
+
+    <div class="content">
+    <h1 class="article-title">
+        <a href="https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/">
+            Run Baseline Performance Tests
+        </a>
+    </h1>
+
+    <div class="meta">
+        
+            
+                <span class="date moment">2016-01-19</span>
+            
+        
+
+        
+            
+                <span class="readingTime">5 min read</span>
+            
+        
+
+        
+
+        
+    </div>
+
+    
+        
+
+        <p><strong>Blog Performance Series, part 2</strong></p>
+<div class="flex-video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G795RIE317s?list=PLWYz5kbNpmYUPTzgw8rhdAk64r4tH1Ynq" frameborder="0" allowfullscreen></iframe>
+</div>
+<p>Welcome to part 2 of my blog performance series. I&rsquo;m Jakob Anderson, and I&rsquo;m going to show you how to run some baseline performance tests on your blog. This is where we find out how your initial performance is, so we can tell where you currently stand, and whether performance has improved after we&rsquo;ve changed things.</p>
+<h3 id="which-metrics">Which metrics?</h3>
+<p>Well, the first thing we need to know is:</p>
+<p><em>Which metrics to measure.</em></p>
+<ul>
+<li>There are TONS of performance metrics floating around, all with various levels of connection to the user experience.</li>
+<li>Which metrics should we use?</li>
+</ul>
+<p><em>It all depends on your users.</em></p>
+<ul>
+<li>What kind of experience do you want to give them?</li>
+</ul>
+<h4 id="lets-figure-it-out">Let&rsquo;s Figure It Out</h4>
+<ul>
+<li>Who are the blog&rsquo;s intended users?</li>
+<li>What do they want from it?</li>
+<li>How will they consume it?</li>
+<li>What metrics best reflect user success with that in mind?</li>
+</ul>
+<h4 id="who-are-the-intended-users">Who are the intended Users?</h4>
+<ul>
+<li>My blog is about H.G. Wells, and has some articles about the author.</li>
+<li>So, I have a pretty general audience, it could contain pretty much anyone at this point.</li>
+<li>From High Schools students cramming for book reports,</li>
+<li>to adults cramming for a book club,</li>
+<li>or just wanting to know more about the &ldquo;latest&rdquo; in H.G. Wells news.</li>
+</ul>
+<h4 id="what-do-they-want-from-it">What do they want from it?</h4>
+<ul>
+<li>They want informative content about H.G. Wells, I would assume.</li>
+</ul>
+<h4 id="how-will-they-consume-it">How will they consume it?</h4>
+<ul>
+<li>mobile phones, tablets,</li>
+<li>desktops, laptops,</li>
+<li>home wifi, library wifi, 3G on the way to class.</li>
+<li>It could be lots of things, many of which are low-bandwidth and high-latency.</li>
+</ul>
+<h3 id="what-metric-connects-best-to-a-good-user-experience-given-these-scenarios">What metric connects best to a good user experience, given these scenarios?</h3>
+<ul>
+<li>Given that we will have some low-bandwidth, high-latency users, we will want to be sure that our pages are light in total transfer bytes, and start and complete render of our critical content very early.</li>
+<li>Performance Budget Guru Tim Kadlec has a great article about the different types of performance metrics here: <a href="https://timkadlec.com/2014/11/performance-budget-metrics/">https://timkadlec.com/2014/11/performance-budget-metrics/</a></li>
+<li>The <strong>Speed Index</strong> metric from WebpageTest will tell us how quickly the visible content renders. For text articles, that should tell us when the article is ready to read.</li>
+<li><strong>Time to First Byte</strong> shows how early the first byte of HTML is downloaded. With blogs, we don&rsquo;t often have control of things that affect the response time of the server, though.</li>
+<li><strong>First Paint</strong> shows how early render begins, which is nice, but Speed Index covers the start to finish of the visible content, so it may be better.</li>
+<li><strong>Load Time</strong> shows how early the document&rsquo;s window is ready for presentation. Non-visible elements, such as analytics and such can actually inflate this metric without the user being very affected.</li>
+</ul>
+<h4 id="metric-closest-to-user-experience">Metric closest to User Experience?</h4>
+<ul>
+<li>So, which metric connects best to a good user experience?</li>
+<li>I would say <em>Speed Index</em>, from WebPagetest is the closest.</li>
+<li>According to the WebPagetest docs:</li>
+</ul>
+<blockquote>
+<p>&ldquo;The <em>Speed Index</em> is the average time at which visible parts of the page are displayed.  It is expressed in milliseconds and dependent on size of the view port.&rdquo; <a href="https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index">https://sites.google.com/a/webpagetest.org/docs/using-webpagetest/metrics/speed-index</a></p>
+</blockquote>
+<h4 id="where-to-test-for-speed-index-metric">Where to test for Speed Index metric?</h4>
+<p>So, where do you go to see your page&rsquo;s current Speed Index score?</p>
+<ul>
+<li>For a Manual one-off test: <a href="http://www.webpagetest.org/">http://www.webpagetest.org/</a></li>
+<li>For a Bulk test, you can go to the github address here: <a href="https://github.com/andydavies/WPT-Bulk-Tester">https://github.com/andydavies/WPT-Bulk-Tester</a></li>
+</ul>
+<h3 id="perform-initial-tests-of-baseline-performance-in-production">Perform initial tests of baseline performance in production</h3>
+<p>[tech demo]</p>
+<ul>
+<li>(Show different Pagetypes: home, 1, 2, 3, 4, 5)</li>
+</ul>
+<p>Let&rsquo;s have a look at the blog we are testing</p>
+<ul>
+<li>I found cool-looking photos from creative commons stock photos sites and put them on the blog, including the blog&rsquo;s icon in the top left</li>
+<li>Here are the different pagetypes i created, and all of the fake content I put into them</li>
+</ul>
+<h4 id="use-chrome-devtools--network-tab">Use Chrome Devtools &gt; Network tab</h4>
+<ul>
+<li>Throttle to Regular 3G, disable cache, see what sticks out</li>
+<li>Most content has arrived and is usable fairly early, but the main homepage image took 45 seconds to download 7MB.</li>
+</ul>
+<h4 id="easy-image-mistakes">Easy image mistakes</h4>
+<ul>
+<li>I explained how I got the images from the web and then immediately re-uploaded them the way they were, which explains how this happened. This was to show how easy it is for someone to let this easy but performance-disastrous mistake happen.</li>
+</ul>
+<h4 id="baseline-tests">Baseline Tests</h4>
+<p>[WebPagetest One-off test demo]</p>
+<ul>
+<li>Examined filmstrip and network waterfall, watched load video</li>
+</ul>
+<p>[WebPagetest Bulk Tester demo]</p>
+<ul>
+<li>Ran bulk test on cable and mobile-3g, waited for results</li>
+<li>The numbers aren&rsquo;t that great. The baseline (no content) page is over 1600 on cable, and over 6000 on mobile.</li>
+</ul>
+<h3 id="lets-have-a-talk-about-performance-budgets">Let&rsquo;s have a talk about Performance Budgets</h3>
+<ul>
+<li>If I want to draw a line in the sand that I can&rsquo;t get worse than, I&rsquo;m gonna want to make a performance budget.</li>
+<li>What metric should I measure? We already decided on Speed Index.</li>
+<li>What pagetypes do I really have? Blank pagetype and General pagetype. Blank is the blank page for a baseline type, and General is any other page with some content.</li>
+<li>I choose to have performance budgets for cable and 3g connections on each of the two pagetypes.</li>
+<li>I committed to some performance budgets on all 4 scenarios:</li>
+</ul>
+<pre tabindex="0"><code>Metric: Speed Index
+
+Blank:
+	cable: &lt; 1000
+	3g: &lt; 3000
+
+General:
+	cable: &lt; 2000
+	3g: &lt; 4000
+</code></pre><h3 id="identify-performance-issues">Identify Performance Issues</h3>
+<ul>
+<li>Images are too big (7MB)</li>
+<li>May not need jQuery (38.5K), fitvids.js (1.5K)</li>
+<li>May not need webfonts (34K)</li>
+<li>Should minify CSS file</li>
+<li>Should minify js files</li>
+</ul>
+<h3 id="create-action-items">Create Action Items</h3>
+<ul>
+<li>Resize images down to size they are actually used on screen</li>
+<li>Recompress images to reduce filesize further</li>
+<li>Minify all js files</li>
+<li>Remove fitvids.js from shared code ( videos won&rsquo;t resize to match content width anymore )</li>
+<li>Replace jquery menu open/close animation from index.js with vanillaJS alternative code</li>
+<li>Remove jquery request from shared code</li>
+<li>Investigate removing webfonts from shared code</li>
+<li>Minify css file</li>
+</ul>
+<h3 id="thank-you">Thank you.</h3>
+<p>I&rsquo;ve shown you how to do some baseline performance tests on your blog. I hope you got a lot of value out of it. Look forward to future videos where we pin down and fix these action items. I hope you liked watching this video and found it very informative. Please Subscribe to see many more great performance videos in the future.</p>
+
+    
+</div>
+
+    
+<div class="footer no-tags">
+
+
+    
+
+    
+</div>
+
+</article>
+
+        
+    </div>
+
+    
+        <div id="comments-container">
+            
+            
+
+            
+
+            
+
+        </div>
+    
+
+    </div>
+
+    
+<footer>
+    <div class="container">
+
+        
+        <div class="recent-posts">
+            <strong>Latest posts</strong>
+            <ul>
+                
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2017-01-12-notes-on-bill-scott-bringing-change-to-life/">&#39;Bill Scott: Bringing Change to Life&#39;</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-04-22-virtual-standup-meetings/">Virtual Stand-up Meetings</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-03-01-when-to-user-cookies-and-localstorage/">When to Use Cookies and LocalStorage</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-01-19-run-baseline-performance-tests/">Run Baseline Performance Tests</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2016-01-18-install-free-ghost-blog-on-heroku/">Install Free Ghost Blog on Heroku</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2015-12-19-speed-performance-and-human-perception/">Speed, Performance, and Human Perception</a>
+                    </li>
+                
+                    <li>
+                        <a href="https://jakobanderson.com/posts/2015-12-12-web-performance-culture/">Web Performance Culture</a>
+                    </li>
+                
+            </ul>
+        </div>
+        
+
+        
+
+        <div class="right">
+            
+            <div class="external-profiles">
+                <strong>Social media</strong>
+
+                
+                <a href="https://twitter.com/jakob_anderson" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://twitter.com/eclecticbeams" target="_blank"><i class="fab fa-twitter"></i></a>
+                
+                <a href="https://github.com/spacerockzero" target="_blank"><i class="fab fa-github"></i></a>
+                
+                <a href="https://jakobanderson.com/index.xml" target="_blank"><i class="fab fa fa-rss"></i></a>
+                
+                <a href="https://jakobanderson.com/index.json" target="_blank"><i class="fab fa fa-brackets"></i></a>
+                
+            </div>
+            
+
+            
+
+            
+            <div class="archive">
+                <a href="/archive/"><strong>Archive</strong></a>
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+<div class="credits">
+    <div class="container">
+        <div class="copyright">
+            <a href="https://jakobanderson.com" target="_blank">
+                &copy;
+                
+                2022
+                
+                by Jakob Anderson
+            </a>
+            
+        </div>
+        <div class="author">
+            <a href="https://jakobanderson.com"
+                target="_blank">JakobAnderson.com</a>
+        </div>
+    </div>
+</div>
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-11240242-6', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+
+
+    <script type="text/javascript" src="https://jakobanderson.com/theme.js"></script>
+
+    
+    
+    
+
+    
+</body>
+
+</html>

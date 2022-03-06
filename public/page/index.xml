@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Jakob Anderson</title>
+    <link>https://jakobanderson.com/page/</link>
+    <description>Recent content in Pages on Jakob Anderson</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 05 Mar 2022 14:59:22 -0700</lastBuildDate><atom:link href="https://jakobanderson.com/page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>https://jakobanderson.com/page/about/</link>
+      <pubDate>Sat, 05 Mar 2022 14:59:22 -0700</pubDate>
+      
+      <guid>https://jakobanderson.com/page/about/</guid>
+      <description>I&amp;rsquo;m a JavaScript, Python, and Rust Software Developer, Web Performance Champion, and Front-End Ops / Front-End Infrastructure engineer.
+I tinker with wacky experiments in AI/ML, stuff, especially writing and art.
+I live and breathe #webperf and constantly improve the web products and people around me with what I learn. I believe that code is craft, and I passionately advocate for the user&amp;rsquo;s experience.
+Find me on the interwebs:
+ aboutme Twitter: Personal Twitter: AI Projects TikTok: AI Projects YouTube: AI Projects LinkedIn Slides.</description>
+    </item>
+    
+  </channel>
+</rss>
