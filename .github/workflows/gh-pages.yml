@@ -5,6 +5,9 @@ on:
     branches:
       - main  # Set a branch to deploy
   pull_request:
+  schedule:
+    # Run around 1200am MDT every Monday
+    - cron: "00 06 * * 1"
 
 jobs:
   deploy:
